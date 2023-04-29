@@ -3,7 +3,8 @@
     "pages/mine/mine",
     "pages/index/index",
     "pages/focus/focus",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/collect/collect"
   ],
   "window": {
     "backgroundTextStyle": "light",

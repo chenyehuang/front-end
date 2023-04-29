@@ -1,6 +1,8 @@
+/* 页面背景颜色 */
 page{
   background-color: #f3f1f1;
 }
+/* 图片背景 */
 .user_info_warp{
   height: 30vh;
   background-color: rgb(241, 164, 164);
@@ -11,10 +13,12 @@ page{
   filter: blur(10rpx);
 }
 
+/* 用户头像 */
 .user_img_wrap{
   position: relative;
 }
 
+/* 用户信息 */
 .user_info{
   position: absolute;
   left: 40%;
@@ -22,24 +26,25 @@ page{
   top: 20%;
   text-align: center;
 }
+/* 用户图像设置 */
 .user_icon{
   width: 120rpx;
   height: 120rpx;
   border-radius: 50%;
 }
-
+/* 用户名字 */
 .user_name{
   color: white;
   margin-top: 20rpx;
   font-size: 32rpx;
 }
-
+/* 下方功能展示 */
 .view_3 {
   width: 100%;
   height: 50%;
   /* background: #f0eeed; */
 }
-
+/* 每一个功能的外观设置 */
 .list-item {
   display: flex;
   flex-direction: row;
@@ -51,18 +56,19 @@ page{
   background: white;
 }
 
+/* 功能的图片设置 */
 .item-image {
   width: 50rpx;
   height: 50rpx;
   margin: 20rpx;
 }
-
+/* 功能文字 */
 .item-text {
   color: gray;
   font-size: 35rpx;
   margin-left: 20rpx;
 }
-
+/* 图片约束 */
 .image-jiantou {
   width: 20rpx;
   height: 35rpx;
@@ -70,7 +76,6 @@ page{
   right: 0; /* 靠右调节 */
   margin-right: 35rpx;
 }
-
 /* 黑线 使得产生阴影效果 */
 .line {
   width: 100%;
