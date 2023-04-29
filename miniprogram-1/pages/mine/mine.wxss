@@ -1,1 +1,80 @@
-/* pages/mine/mine.wxss */
+page{
+  background-color: #f3f1f1;
+}
+.user_info_warp{
+  height: 30vh;
+  background-color: rgb(241, 164, 164);
+}
+.user_bg{
+  height: 30vh;
+  /* 高斯模糊 */
+  filter: blur(10rpx);
+}
+
+.user_img_wrap{
+  position: relative;
+}
+
+.user_info{
+  position: absolute;
+  left: 40%;
+  transform: translaxteX(-50%);
+  top: 20%;
+  text-align: center;
+}
+.user_icon{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+
+.user_name{
+  color: white;
+  margin-top: 20rpx;
+  font-size: 32rpx;
+}
+
+.view_3 {
+  width: 100%;
+  height: 50%;
+  /* background: #f0eeed; */
+}
+
+.list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 80rpx;
+  margin-top: 20rpx;
+  position: relative; /*父元素位置要设置为相对*/
+  background: white;
+}
+
+.item-image {
+  width: 50rpx;
+  height: 50rpx;
+  margin: 20rpx;
+}
+
+.item-text {
+  color: gray;
+  font-size: 35rpx;
+  margin-left: 20rpx;
+}
+
+.image-jiantou {
+  width: 20rpx;
+  height: 35rpx;
+  position: absolute; /* 要约束所在位置的子元素的位置要设置成绝对 */
+  right: 0; /* 靠右调节 */
+  margin-right: 35rpx;
+}
+
+/* 黑线 使得产生阴影效果 */
+.line {
+  width: 100%;
+  height: 3rpx;
+  background: lightgray;
+  margin-left: 90rpx;
+}

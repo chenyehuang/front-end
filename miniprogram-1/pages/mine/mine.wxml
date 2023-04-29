@@ -1,2 +1,80 @@
-<!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<view class="user_info_warp">
+  <view class="user_img_wrap">
+    <image class="user_bg" src="/image/头像.jpg"></image>
+    <view class="user_info">
+      <image class="user_icon" src="/image/头像.jpg"></image>
+      <view class="user_name">用户名</view>
+    </view>
+  </view>
+</view>
+
+<!-- <view class='container_4'>
+  <view class='middle-item' hover-stay-time="150">
+    <image class="image_tupian_1" src="/image/_我的.png"></image>
+    <text class='text_2'>设置</text>
+    <image class="image-jiantou" src="/image/返回.png"></image>
+  </view>
+
+  <view class="view_line"></view>
+
+  <view class='middle-item' hover-class="opcity" hover-stay-time="150">
+    <image class="image_tupian_1" src="/image/我的.png"></image>
+    <text class='text_2'>个人信息</text>
+    <image class="image-jiantou" src="/image/返回.png"></image>
+  </view>
+
+  <view class="view_line"></view>
+		
+  <view class='middle-item' hover-class="opcity" hover-stay-time="150">
+    <image class="image_tupian_1" src="/image/头像.jpg"></image>
+    <text class='text_2'>消费记录</text>
+    <image class="image-jiantou" src="/image/返回.png"></image>
+  </view>
+</view> -->
+
+
+<view class="view_3">
+    <view class="list-item">
+      <image class="item-image" src="/image/收藏.png"></image>
+      <text class="item-text">我的收藏</text>
+      <image class="image-jiantou" src="/image/返回.png"></image>
+    </view>
+
+    <view class="line"></view>
+
+    <view class="list-item">
+      <image class="item-image" src="/image/值不值.png"></image>
+      <text class="item-text">我的值/不值</text>
+      <image class="image-jiantou" src="/image/返回.png"></image>
+    </view>
+    <view class="line"></view>
+    <view class="list-item">
+      <image class="item-image" src="/image/爆料.png"></image>
+      <text class="item-text">我的爆料</text>
+      <image class="image-jiantou" src="/image/返回.png"></image>
+    </view>
+    <view class="line"></view>
+    <view class="list-item">
+      <image class="item-image" src="/image/讨论，评论.png"></image>
+      <text class="item-text">我的评论</text>
+      <image class="image-jiantou" src="/image/返回.png"></image>
+    </view>
+    <view class="line"></view>
+    <view class="list-item">
+      <image class="item-image" src="/image/足迹.png"></image>
+      <text class="item-text">我的足迹</text>
+      <image class="image-jiantou" src="/image/返回.png"></image>
+    </view>
+    <view class="line"></view>
+    <view class="list-item">
+      <image class="item-image" src="/image/设置.png"></image>
+      <text class="item-text">设置</text>
+      <image class="image-jiantou" src="/image/返回.png"></image>
+    </view>
+    <view class="line"></view>
+    <view class="list-item">
+      <image class="item-image" src="/image/意见反馈.png"></image>
+      <text class="item-text">意见反馈</text>
+      <image class="image-jiantou" src="/image/返回.png"></image>
+    </view>
+</view>

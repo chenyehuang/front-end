@@ -3,7 +3,7 @@
     "pages/mine/mine",
     "pages/index/index",
     "pages/focus/focus",
-    "pages/logs/logs"    
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -26,12 +26,13 @@
         "selectedIconPath": "image/我的-我的关注.png"
       },
       {
-      "pagePath": "pages/mine/mine",
-      "text": "我的",
-      "iconPath": "image/_我的.png",
-      "selectedIconPath": "image/我的_选择.png"
-    }
-  ]},
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "image/_我的.png",
+        "selectedIconPath": "image/我的_选择.png"
+      }
+    ]
+  },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
