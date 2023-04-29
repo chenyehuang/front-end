@@ -22,12 +22,13 @@
   </navigator>
   
     <view class="line"></view>
-
-    <view class="list-item">
-      <image class="item-image" src="/image/值不值.png"></image>
-      <text class="item-text">我的值/不值</text>
-      <image class="image-jiantou" src="/image/返回.png"></image>
-    </view>
+    <navigator url="/pages/worth/worth">
+      <view class="list-item">
+        <image class="item-image" src="/image/值不值.png"></image>
+        <text class="item-text">我的值/不值</text>
+        <image class="image-jiantou" src="/image/返回.png"></image>
+      </view>
+    </navigator>
     <!-- 画直线，显示有条理 -->
     <view class="line"></view>
 
