@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/mine/mine",
+    "pages/tips/tips",
     "pages/comment/comment",
     "pages/worth/worth",
     "pages/index/index",

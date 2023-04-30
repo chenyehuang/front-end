@@ -32,11 +32,13 @@
     <!-- 画直线，显示有条理 -->
     <view class="line"></view>
 
-    <view class="list-item">
-      <image class="item-image" src="/image/爆料.png"></image>
-      <text class="item-text">我的爆料</text>
-      <image class="image-jiantou" src="/image/返回.png"></image>
-    </view>
+    <navigator url="/pages/tips/tips">
+      <view class="list-item">
+        <image class="item-image" src="/image/爆料.png"></image>
+        <text class="item-text">我的爆料</text>
+        <image class="image-jiantou" src="/image/返回.png"></image>
+      </view>
+    </navigator>
 
     <view class="line"></view>
     <navigator url="/pages/comment/comment">
