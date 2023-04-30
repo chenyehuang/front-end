@@ -39,12 +39,13 @@
     </view>
 
     <view class="line"></view>
-
-    <view class="list-item">
-      <image class="item-image" src="/image/讨论，评论.png"></image>
-      <text class="item-text">我的评论</text>
-      <image class="image-jiantou" src="/image/返回.png"></image>
-    </view>
+    <navigator url="/pages/comment/comment">
+      <view class="list-item">
+        <image class="item-image" src="/image/讨论，评论.png"></image>
+        <text class="item-text">我的评论</text>
+        <image class="image-jiantou" src="/image/返回.png"></image>
+      </view>
+    </navigator>
 
     <view class="line"></view>
 

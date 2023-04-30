@@ -7,8 +7,7 @@
     bindtap="handleItemTap"
     data-index="{{index}}"
     >
-
-    {{item.value}}
+    {{item.value}} {{count ? '(${count})' : ''}}
   </view>
   </view>
   <view class="tabs_content">
