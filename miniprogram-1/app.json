@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/mine/mine",
+    "pages/feedback/feedback",
+    "pages/setting/setting",
     "pages/footprint/footprint",
     "pages/tips/tips",
     "pages/comment/comment",

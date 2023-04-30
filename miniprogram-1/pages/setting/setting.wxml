@@ -1,0 +1,56 @@
+<view class="content">
+  <view class="line"></view>
+  <view class="list-item" bindtap="chooseImage">
+    <view class="label">头像</view>
+    <image class="avatar_img" src="/image/我的.png"></image>
+    <image class="ahead_img" src="/image/返回.png"></image>
+  </view>
+  <view class="line"></view>
+
+  <!-- 昵称 -->
+  <view class="list-item" bindtap="editNickname">
+    <view class="label">昵称</view>
+    <!-- 这部分真不会搞呜呜呜 -->
+    <input class="input" type="text" placeholder="{{nickname}}"></input>
+    <image class="ahead_img" src="/image/返回.png"></image>
+  </view>
+  <view class="line"></view>
+  <!-- 设置换行 -->
+  <view class="spacer"></view> 
+
+  <view class="line"></view>
+  <navigator url="/pages/address/address">
+    <view class="list-item" bindtap="goToAddress">
+      <view class="label">收货地址</view>
+      <image class="ahead_img" src="/image/返回.png"></image>
+    </view>
+  </navigator>
+  <view class="line"></view>
+
+  <!-- 设置换行 -->
+  <view class="spacer"></view> 
+
+  <view class="line"></view>
+  <view class="list-item" bindtap="goToSecurity">
+    <view class="label">绑定手机号</view>
+    <image class="ahead_img" src="/image/返回.png"></image>
+  </view>
+  <view class="line"></view>
+
+  <view class="list-item" bindtap="logout">
+    <view class="label">实名认证信息</view>
+    <image class="ahead_img" src="/image/返回.png"></image>
+  </view>
+  <view class="line"></view>
+
+  <view class="list-item" bindtap="logout">
+    <view class="label">账户与安全</view>
+    <image class="ahead_img" src="/image/返回.png"></image>
+  </view>
+  <view class="line"></view>
+</view>
+
+
+<view>
+  <button class="sign_out" bindtap="showActionSheet">退出登录</button>
+</view>

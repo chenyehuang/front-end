@@ -69,7 +69,7 @@ page{
   margin-left: 20rpx;
 }
 /* 图片约束 */
-.image-jiantou {
+.image-fanghui {
   width: 20rpx;
   height: 35rpx;
   position: absolute; /* 要约束所在位置的子元素的位置要设置成绝对 */
