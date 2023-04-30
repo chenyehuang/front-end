@@ -51,11 +51,13 @@
 
     <view class="line"></view>
 
-    <view class="list-item">
-      <image class="item-image" src="/image/足迹.png"></image>
-      <text class="item-text">我的足迹</text>
-      <image class="image-jiantou" src="/image/返回.png"></image>
-    </view>
+    <navigator url="/pages/footprint/footprint">
+      <view class="list-item">
+        <image class="item-image" src="/image/足迹.png"></image>
+        <text class="item-text">我的足迹</text>
+        <image class="image-jiantou" src="/image/返回.png"></image>
+      </view>
+    </navigator>
 
     <view class="line"></view>
 

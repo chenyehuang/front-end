@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/mine/mine",
+    "pages/footprint/footprint",
     "pages/tips/tips",
     "pages/comment/comment",
     "pages/worth/worth",

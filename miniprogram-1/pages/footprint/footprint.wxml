@@ -1,0 +1,14 @@
+<Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
+  <view class="container">
+  <!-- 如果有数则显示，这部分的显示还需要进行下一步完善 -->
+  <view wx:for="{{record}}" wx:key="index">
+    <view>{{item}}</view>
+  </view>
+
+<!-- 如果没数据的话显示图片和按钮 -->
+  <view wx:if="{{record.length == 0}}" class="no-data">
+    <image class="footprint_img" src="/image/暂无足迹.jpg"></image>
+    <button class="no-data">去逛逛</button>
+  </view>
+</view>
+</Tabs>
