@@ -1,0 +1,36 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/test/test",
+    "pages/logs/logs"
+
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "暨大值得买",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+      "list": [
+          {"pagePath": "pages/index/index",
+            "text": "首页",
+            "iconPath": "image/img8.png",
+            "selectedIconPath": "image/img8.png"
+            },
+            {"pagePath": "pages/test/test",
+                "text": "我的关注",
+                "selectedIconPath": "image/img9.png",
+                "iconPath": "image/img9.png"},
+                
+            {"pagePath": "pages/logs/logs",
+                "text": "我的",
+                "iconPath": "image/img10.png",
+                "selectedIconPath": "image/img10.png"
+            }
+
+      ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
