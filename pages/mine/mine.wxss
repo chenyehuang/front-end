@@ -1,0 +1,135 @@
+/* 页面背景颜色 */
+page{
+  background-color: #f3f1f1;
+}
+
+/* .user_info {
+  height: 70vw;
+  overflow: hidden;
+}
+.user_info .user_info_wrap {
+  position: relative;
+}
+.user_info .user_info_wrap .user_bgc {
+  height: 70vw;
+  filter: blur(10rpx);
+}
+.user_info .user_info_wrap .info {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 80rpx;
+}
+.user_info .user_info_wrap .info .info_icon {
+  height: 170rpx;
+  width: 170rpx;
+  border-radius: 50%;
+}
+.user_info .user_info_wrap .info .info_name {
+  text-align: center;
+  margin-top: 20rpx;
+  color: #fff;
+  font-size: 38rpx;
+  font-weight: bold;
+}
+.user_info .user_login {
+  position: relative;
+  height: 70vw;
+                          background-color: var(--themeColor);
+  background-color: rgb(253, 75, 75);
+}
+.user_info .user_login navigator {
+  position: absolute;
+  padding: 20rpx 40rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 120rpx;
+  border: 6rpx solid #fff;
+  border-radius: 10rpx;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+} */
+
+
+/* 图片背景 */
+.user_info_warp{
+  height: 30vh;
+  background-color: rgb(241, 164, 164);
+}
+.user_bg{
+  height: 30vh;
+  /* 高斯模糊 */
+  filter: blur(10rpx);
+}
+
+/* 用户头像 */
+.user_img_wrap{
+  position: relative;
+}
+
+/* 用户信息 */
+.user_info{
+  position: absolute;
+  left: 40%;
+  transform: translaxteX(-50%);
+  top: 20%;
+  text-align: center;
+}
+/* 用户图像设置 */
+.user_icon{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+/* 用户名字 */
+.user_name{
+  color: white;
+  margin-top: 20rpx;
+  font-size: 32rpx;
+}
+/* 下方功能展示 */
+.view_3 {
+  width: 100%;
+  height: 50%;
+  /* background: #f0eeed; */
+}
+/* 每一个功能的外观设置 */
+.list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 80rpx;
+  margin-top: 20rpx;
+  position: relative; /*父元素位置要设置为相对*/
+  background: white;
+}
+
+/* 功能的图片设置 */
+.item-image {
+  width: 50rpx;
+  height: 50rpx;
+  margin: 20rpx;
+}
+/* 功能文字 */
+.item-text {
+  color: gray;
+  font-size: 35rpx;
+  margin-left: 20rpx;
+}
+/* 图片约束 */
+.image-fanghui {
+  width: 20rpx;
+  height: 35rpx;
+  position: absolute; /* 要约束所在位置的子元素的位置要设置成绝对 */
+  right: 0; /* 靠右调节 */
+  margin-right: 35rpx;
+}
+/* 黑线 使得产生阴影效果 */
+.line {
+  width: 100%;
+  height: 3rpx;
+  background: lightgray;
+  margin-left: 90rpx;
+}

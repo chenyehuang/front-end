@@ -1,0 +1,51 @@
+<!--pages/focus/focus.wxml-->
+
+<view>
+<!-- 添加点击跳转 -->
+  <view class="line1"></view>
+  <searchInput></searchInput>
+  <!-- <navigator url="/pages/search/search">
+    <view class="list-item1">
+      <image class="item-image1" src="/icon/搜索.png"></image>
+      <text class="item-text1">搜索</text>
+    </view>
+  </navigator> -->
+  <view class="line1"></view>
+
+  <navigator url="/pages/manage/manage">
+    <text class="item-text2">管理</text>
+  </navigator>
+</view>
+
+<view>
+  <navigator url="/pages/goods_detail/goods_detail">
+    <view class="list-item">
+      <image class="item-image" src="/image/我的关注/goods1.png"></image>
+      <view class="item-text">维达抽纸整箱24包家用实惠</view>
+      <view class="item-text">5包</view>
+      <view class="item-text">9.9元</view>
+    </view>
+  </navigator>
+<view class="line"></view>
+
+<navigator url="/pages/goods_detail/goods_detail">
+  <view class="list-item">
+    <image class="item-image" src="/image/我的关注/goods2.png"></image>
+    <view class="item-text">100%每日黑巧克力纯可可脂</view>
+    <view class="item-text">20包</view>
+    <view class="item-text">8.9元</view>
+  </view>
+</navigator>
+<view class="line"></view>
+
+<navigator url="/pages/goods_detail/goods_detail">
+  <view class="list-item">
+    <image class="item-image" src="/image/我的关注/goods3.png"></image>
+    <view class="item-text">文具按动签字学生用中性笔</view>
+    <view class="item-text">12支</view>
+    <view class="item-text">9.9元</view>
+  </view>
+</navigator>
+<view class="line"></view>
+
+</view>

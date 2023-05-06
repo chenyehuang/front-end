@@ -1,0 +1,80 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+/* 导航菜单 */
+#navView{
+    display: flex;  /* 应用flex布局 ，所有的子元素排在一行*/
+    flex-wrap: wrap; /* 换行*/
+    height: 464rpx;
+    align-content: normal; /* 多行垂直排列*/
+  font-size: 26rpx;
+    font-weight: 600;
+  }
+  .navItemView{
+    width: 150rpx;
+    text-align: center;
+    margin: 0 100rpx;
+  }
+  .navItemView > image{
+    width: 150rpx;
+    height: 150rpx;
+  }
+  
+  /* 销售排行 1行2列：左图片，右文字（多行文字） */
+/* 第2层样式 */
+.paihang{
+    display: flex; /* felx模式，默认图片和文字区块，从左到右排列，也就是1行2列 */
+    margin: 1rpx;
+    border: #ddd solid 1px;  /* 每个产品信息下面的横线 */
+    padding: 10rpx;
+}
+.paihang-img{
+    width: 80px;
+    height: 80px;
+}
+.two-line-text{
+    padding: 3px;
+    display: flex; /* 定义flex后，下面的属性才能生效 */
+    flex-direction: column; /* 将默认的从左到右布局重新定义为从上到下的多行排列布局 */
+}
+.txt1{
+    margin: 3px 3px;
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap; color:  #09bb07;
+}
+.txt2{
+    margin: 3px 3px;
+    font-size: 13px;
+    color: #656565;
+    white-space: nowrap;
+}
+.txt3{
+    margin: 3px 3px;
+    font-size: 13px;
+    color: #656565;
+    white-space: nowrap;
+}
+.moreView{
+    height: 88rpx;
+    line-height: 88rpx;
+    font-size: 28rpx;
+    color: #a39f9f;
+    position: relative;}

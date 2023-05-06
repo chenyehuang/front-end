@@ -1,0 +1,100 @@
+<!-- <view class="user_info">
+  <view class="user_info_wrap" wx:if="{{userInfo.avatarUrl}}">
+    <image class="user_bgc" src="{{userInfo.avatarUrl}}" />
+    <view class="info">
+      <image class="info_icon" src="{{userInfo.avatarUrl}}" />
+      <view class="info_name">{{userInfo.nickName}}</view>
+    </view>
+  </view>
+  <view class="user_login" wx:else>
+    <navigator url="/pages/login/login">登陆</navigator>
+  </view>
+</view> -->
+
+
+
+<!-- 上面用户头像及名字 -->
+<!-- <view class="user_info"> -->
+<!-- <view class="user_info_warp"wx:if="{{userInfo.avatarUrl}}"> -->
+  <view class="user_img_wrap">
+    <image class="user_bg" src="/image/我的/头像.jpg"></image>
+    <view class="user_info">
+      <image class="user_icon" src="/image/我的/头像.jpg"></image>
+      <view class="user_name">用户名</view>
+    </view>
+  </view>
+<!-- <view class="user_login" wx:else>
+  <navigator url="/pages/login/login">登陆</navigator>
+</view> -->
+<!-- </view> -->
+
+
+<!-- 下方功能 -->
+<view class="view_3">
+<!-- 添加点击跳转 -->
+  <navigator url="/pages/collect/collect">
+    <view class="list-item">
+      <image class="item-image" src="/image/我的/收藏.png"></image>
+      <text class="item-text">我的收藏</text>
+      <image class="image-fanghui" src="/image/我的/返回.png"></image>
+    </view>
+  </navigator>
+  
+    <view class="line"></view>
+    <navigator url="/pages/worth/worth">
+      <view class="list-item">
+        <image class="item-image" src="/image/我的/值不值.png"></image>
+        <text class="item-text">我的值/不值</text>
+        <image class="image-fanghui" src="/image/我的/返回.png"></image>
+      </view>
+    </navigator>
+    <!-- 画直线，显示有条理 -->
+    <view class="line"></view>
+
+    <navigator url="/pages/tips/tips">
+      <view class="list-item">
+        <image class="item-image" src="/image/我的/爆料.png"></image>
+        <text class="item-text">我的爆料</text>
+        <image class="image-fanghui" src="/image/我的/返回.png"></image>
+      </view>
+    </navigator>
+
+    <view class="line"></view>
+    <navigator url="/pages/comment/comment">
+      <view class="list-item">
+        <image class="item-image" src="/image/我的/讨论，评论.png"></image>
+        <text class="item-text">我的评论</text>
+        <image class="image-fanghui" src="/image/我的/返回.png"></image>
+      </view>
+    </navigator>
+
+    <view class="line"></view>
+
+    <navigator url="/pages/footprint/footprint">
+      <view class="list-item">
+        <image class="item-image" src="/image/我的/足迹.png"></image>
+        <text class="item-text">我的足迹</text>
+        <image class="image-fanghui" src="/image/我的/返回.png"></image>
+      </view>
+    </navigator>
+
+    <view class="line"></view>
+
+    <navigator url="/pages/setting/setting">
+      <view class="list-item">
+        <image class="item-image" src="/image/我的/设置.png"></image>
+        <text class="item-text">设置</text>
+        <image class="image-fanghui" src="/image/我的/返回.png"></image>
+      </view>
+  </navigator>
+
+    <view class="line"></view>
+
+  <navigator url="/pages/feedback/feedback">
+    <view class="list-item">
+      <image class="item-image" src="/image/我的/意见反馈.png"></image>
+      <text class="item-text">意见反馈</text>
+      <image class="image-fanghui" src="/image/我的/返回.png"></image>
+    </view>
+  </navigator>
+</view>
