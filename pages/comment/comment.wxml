@@ -1,0 +1,3 @@
+<Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
+  <!-- <view class="his_num">{{collectNums}}</view> -->
+</Tabs>

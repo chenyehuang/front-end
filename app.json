@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mine/mine",
+    "pages/feedback/feedback",
+    "pages/setting/setting",
+    "pages/footprint/footprint",
+    "pages/tips/tips",
+    "pages/comment/comment",
+    "pages/worth/worth",
+    "pages/focus/focus",
+    "pages/logs/logs",
+    "pages/collect/collect",
+    "pages/manage/manage",
+    "pages/search/search",
+    "pages/detail/detail",
+    "pages/Administrator/Administrator",
+    "pages/Administrator/user_management/user_management",
+    "pages/Administrator/goods_management/goods_management",
+    "pages/Administrator/comment_management/comment_management",
+    "pages/Administrator/mine_info/mine_info",
+    "pages/Administrator/guidance_note/guidance_note"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "暨大值得买",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icon/首页.png",
+        "selectedIconPath": "icon/首页-选中.png"
+      },
+      {
+        "pagePath": "pages/focus/focus",
+        "text": "我的关注",
+        "iconPath": "icon/我的关注.png",
+        "selectedIconPath": "icon/我的-我的关注.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "icon/_我的.png",
+        "selectedIconPath": "icon/我的_选择.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

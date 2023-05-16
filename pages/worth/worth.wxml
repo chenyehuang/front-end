@@ -1,0 +1,10 @@
+<Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
+<!-- 这部分可以看情况删除 -->
+  <view class="worth_main">
+    <view class="worth_title">
+      <text class="worth_tips active">商品</text>
+      <text class="worth_tips">服务</text>
+      <text class="worth_tips">资讯</text>
+    </view> 
+  </view>
+</Tabs>
