@@ -72,7 +72,7 @@
         <view class="goods-info">
           <view class="goods-name">{{goods.name}}</view>
           <view class="goods-price">{{goods.price}}￥</view>
-          <view class="goods-likes">{{goods.likes}}人认为值得买</view>
+          <view class="goods-likes">{{goods.value}}人认为值得买</view>
         </view>
     </navigator>
   </block>

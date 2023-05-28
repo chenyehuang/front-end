@@ -1,3 +1,75 @@
+.container {
+  position:relative;
+  /* margin-top: 10px;
+  text-align: center; */
+  top:-15px;
+  left:140px;
+
+}
+
+.username {
+  /* font-size: 20px; */
+  margin-bottom: 10px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  position:relative;
+  background-color: #fff;
+  padding: 40px;/*高*/
+  top:-170px;
+  /* border-radius: 8px; *//*圆角矩形边缘弧度*/
+  width: 300px;
+}
+
+.modal-title {
+  /* position:relative;
+  font-size: 10px;
+  font-weight: bold;
+  margin-bottom: 10px; */
+  position: relative; left: 3rpx; top: -19rpx; width: 172rpx; height: 50rpx; display: block; box-sizing: border-box;
+}
+
+.modal-input {
+  width: 347rpx; height: 94rpx; display: block; box-sizing: border-box; left: 0rpx; top: -43rpx; position: relative;
+  /* position:relative;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px; */
+}
+.cancelModify{
+  position: relative; left: 0rpx; top: -47rpx;
+}
+.confirmModify{
+  position: relative; left: 0rpx; top: -47rpx;
+}
+
+.modal-buttons {
+  position:relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+/* //////////////////////////////////////////////////////////// */
 .content {
   width: 100%;
   height: 50%;
@@ -17,9 +89,10 @@
   right: 7%; /* 靠右调节 */
 }
 .info_icon{
+  position: relative; left: 528rpx; top: 0rpx;
   width: 60rpx;
   height: 60rpx;
-  position: absolute; /* 要约束所在位置的子元素的位置要设置成绝对 */
+  position: relative; 
   right: 7%; /* 靠右调节 */
 }
 .input{
