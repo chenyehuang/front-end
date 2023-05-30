@@ -24,8 +24,8 @@
       <!-- swiper-item里面承载的是一张图片，不同的swiper-item承载不同的图片 -->
 
       <!-- 这里路径要根据每一张轮播图片来改 -->
-      <navigator url="/pages/goods_detail/goods_detail">
-        <image src="{{item}}"></image>
+      <navigator url="/pages/goods_detail/goods_detail?goods_id={{item.id}}">
+        <image src="{{item.image}}"></image>
       </navigator>
 
     </swiper-item>

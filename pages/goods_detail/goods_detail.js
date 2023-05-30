@@ -96,14 +96,29 @@ Page({
     },
     //获取详情数据
     async getGoodInfo(goods_id) {
-        const goodsData = require('../../data/goods.js');
-        const goodInfo = goodsData.goodsData.find(item => item.id === parseInt(goods_id));
+      var that=this
+      wx.request({
+      url: 'http://47.115.221.21:8080/api/product/'+goods_id, // 替换为你的接口地址
+      method: 'GET', // 请求方法，可选值包括：GET、POST、PUT、DELETE等
+      data: {
+        // 如果需要发送请求参数，可以在这里设置
+        // param1: 'value1',
+        // param2: 'value2'
+      },
+      header: {
+        // 'Content-Type': 'application/json' // 根据接口要求设置请求头
+      },
+      success: function (res) {
+        // 请求成功回调函数
+        const goodInfo = res.data.products[0];
+        // const goodsData = require('../../data/goods.js');
+        // const goodInfo = goodsData.goodsData.find(item => item.id === parseInt(goods_id));
         console.log(goodInfo)
-        this.GoodInfo = goodInfo
+        that.GoodInfo = goodInfo
             //获取收藏信息————待完成
         // let collect = wx.getStorageSync("collect") || [];
         // let index = collect.findIndex(v => v.goods_id === this.GoodInfo.goods_id)
-        this.setData({
+        that.setData({
             goodInfo: {
                 goods_name: goodInfo.name,
                 goods_price: goodInfo.price,
@@ -117,6 +132,13 @@ Page({
             notValue:goodInfo.notvalue
             // isCollect: index !== -1 ? true : false
         })
+      },
+      fail: function (res) {
+        // 请求失败回调函数
+        console.error(res);
+      }
+    });
+        
     },
     //添加购物车
     // handleCartAdd() {

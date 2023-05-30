@@ -65,7 +65,6 @@ confirmModify() {
         const openid = wx.getStorageSync('openid');
         // console.log("AA",openid)
         const nickName=userInfo.nickName
-        console.log("235",nickName)
         const avatarUrl=userInfo.avatarUrl
         wx.request({//提供用户信息进行用户注册
           url: 'http://47.115.221.21:8080/api/create_user/', // 替换为你的接口地址

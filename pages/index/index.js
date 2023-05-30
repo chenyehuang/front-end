@@ -1,6 +1,6 @@
 // index.js
 // const goodsData = require('../../data/goods.js');
-const startupData = require('../../data/startup.js');
+// const startupData = require('../../data/startup.js');
 
 // 获取应用实例
 const app = getApp()
@@ -20,7 +20,7 @@ Page({
     offset: 0,
     limit: 3,//每次排行榜显示数量
     sort_type:'default',//排序方式
-    //轮播图片
+    //轮播商品信息
     imgURLs: [],
     // 其他数据
     
@@ -56,10 +56,27 @@ Page({
     // });
     
     //获取主页轮播图url信息
-    const startupList = startupData.startupData.imgURLs;
-    this.setData({
-      imgURLs: startupList,
+    var that=this
+    wx.request({
+      url: 'http://47.115.221.21:8080/api/front_product', // 替换为你的接口地址
+      method: 'GET', // 请求方法，可选值包括：GET、POST、PUT、DELETE等
+      success: function (res) {
+        // 请求成功回调函数
+        console.log('轮播图',res.data.products); // 输出接口返回的数据
+        that.setData({
+          imgURLs:res.data.products
+        })
+      },
+      fail: function (res) {
+        // 请求失败回调函数
+        console.error(res);
+      }
     });
+    ///////////////////////////////////
+    // const startupList = startupData.startupData.imgURLs;
+    // this.setData({
+    //   imgURLs: startupList,
+    // });
     // 从 goodsData 中获取商品列表
     var event = {
       currentTarget: {

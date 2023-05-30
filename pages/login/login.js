@@ -86,6 +86,7 @@ Page({
                     }
                     else{
                       wx.showToast({ title: '已经为您自动注册', icon: 'none' });
+                      wx.setStorageSync('userInfo', userInfo);
                     }
                   },
                   fail: function (res) {
