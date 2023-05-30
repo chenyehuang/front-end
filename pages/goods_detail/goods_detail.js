@@ -77,6 +77,38 @@ Page({
     // 加入关注
     //重写这个函数
     focusAdd() {
+      // 从缓存中获取值x
+      var that=this
+      wx.getStorage({
+        key: 'openid', // 缓存的键名
+        success(res) {
+          var openid = res.data; // 获取到的值赋给变量x
+          // console.log(openid)
+          // console.log(that.GoodInfo.id)
+          wx.request({
+            url: 'http://47.115.221.21:8080/api/add_collect', // 替换为你的接口地址
+            method: 'GET', // 请求方法，可选值包括：GET、POST、PUT、DELETE等
+            data: {
+              // 如果需要发送请求参数，可以在这里设置id：good_id以及用户的openid
+              good_id:that.GoodInfo.id,
+              openid:openid
+            },
+            success: function (res) {
+              // 请求成功回调函数
+              console.log("关注",res.data); // 输出接口返回的数据
+            },
+            fail: function (res) {
+              // 请求失败回调函数
+              console.error(res);
+            }
+          });
+        },
+        fail(err) {
+          console.log(err); // 如果获取失败，打印错误信息
+        }
+      });
+
+
         // let cart = wx.getStorageSync("cart") || [];
         // let index = cart.findIndex(v => v.goods_id === this.GoodInfo.goods_id)
         // if (index === -1) {
@@ -125,6 +157,7 @@ Page({
                 goods_introduce: goodInfo.introduce,
                 // goods_carousel_image: goodInfo.carousel_image,
                 pics: goodInfo.pics,
+                id:goodInfo.id,
                 
             },
             recent_prices:goodInfo.recent_prices,

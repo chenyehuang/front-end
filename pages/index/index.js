@@ -62,7 +62,7 @@ Page({
       method: 'GET', // 请求方法，可选值包括：GET、POST、PUT、DELETE等
       success: function (res) {
         // 请求成功回调函数
-        console.log('轮播图',res.data.products); // 输出接口返回的数据
+        // console.log('轮播图',res.data.products); // 输出接口返回的数据
         that.setData({
           imgURLs:res.data.products
         })

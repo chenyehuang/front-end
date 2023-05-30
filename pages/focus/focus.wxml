@@ -53,10 +53,10 @@
 <!-- 购物车列表 -->
 <view class="shopping_cart">
   <checkbox-group bindchange="selectItem">
-    <view wx:for="{{cartList}}" wx:key="{{index}}">
+    <view wx:for="{{cartList}}" wx:key="{{id}}">
       <view>
         <checkbox wx:if="{{isManage}}" value="{{item.id}}" checked="{{item.checked}}" ></checkbox>
-        <image class="item-image" src="{{item.img_src}}"></image>
+        <image class="item-image" src="{{item.image}}"></image>
         <text>{{item.name}}</text>
         <view class="item-text">{{item.price}}元</view>
 

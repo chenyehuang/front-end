@@ -5,6 +5,6 @@
 </view>
 
 <!-- 下面这里是搜索功能，跳转到对应商品的详情页面 -->
-<navigator url="/pages/goods_detail/goods_detail?goods_id={{item.goods_id}}" class="search_content" wx:for="{{goods}}" wx:key="goods_id">
-  <view>{{item.goods_name}}</view>
+<navigator url="/pages/goods_detail/goods_detail?goods_id={{item.id}}" class="search_content" wx:for="{{goods}}" wx:key="id">
+  <view>{{item.name}}</view>
 </navigator>
