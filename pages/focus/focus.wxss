@@ -72,7 +72,6 @@
   margin-left: 0rpx;
 }
 
-
 /* 猜你喜欢区域设置 */
 .goods-list {
   display: flex;
