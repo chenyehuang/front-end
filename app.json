@@ -1,7 +1,6 @@
 {
   "pages": [
     "pages/index/index",
-
     "pages/Administrator/Administrator",
     "pages/Administrator/user_management/user_management",
     "pages/Administrator/goods_management/goods_management",
@@ -22,7 +21,8 @@
     "pages/search/search",
     "pages/setting/setting",
     "pages/tips/tips",
-    "pages/worth/worth"
+    "pages/worth/worth",
+    "pages/tips-commit/tips-commit"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,0 +1,53 @@
+<form bindsubmit="formSubmit">
+  <view class="form-group">
+    <view class="label">商品名称</view>
+    <input class="input" type="text" placeholder="请输入商品名称" bindinput="nameInput" value="{{name}}" />
+  </view>
+  <view class="form-group">
+    <view class="label">商品价格</view>
+    <input class="input" type="number" placeholder="请输入商品价格" bindinput="priceInput" value="{{price}}" />
+  </view>
+
+
+  <view class="input-container">
+  <view class="input-label">最近的价格</view>
+  <input type="number" placeholder="请输入最近的价格" bindinput="priceChangeInput" value="{{priceValue}}" />
+</view>
+<view class="input-container">
+  <view class="input-label">对应的日期</view>
+  <picker mode="date" value="{{dateValue}}" start="{{startDate}}" end="{{endDate}}" bindchange="dateChangeInput">
+    <view class="picker">当前选择：{{dateValue}}</view>
+  </picker>
+</view>
+<button type="primary" bindtap="confirmPrice">记录</button>
+<view class="price-list">
+<view class="price-value-date">已填写:（只提交最新五个）</view>
+  <view class="price-item" wx:for="{{prices}}" wx:key="index">
+    <view class="price-value-date">价格：{{item.Price}}   日期：{{item.Date}}</view>
+  </view>
+</view>
+
+
+  <view class="form-group">
+    <view class="label">商品描述</view>
+    <textarea class="input" placeholder="请输入商品描述" bindinput="descriptionInput" value="{{description}}"></textarea>
+  </view>
+  <view class="form-group">
+    <view class="label">购买渠道</view>
+    <input class="input" type="text" placeholder="请输入购买渠道" bindinput="purchaseChannelInput" value="{{purchaseChannel}}" />
+  </view>
+  <view class="form-group">
+    <view class="label">推荐理由</view>
+    <textarea class="input" placeholder="请输入推荐理由" bindinput="recommendationReasonInput" value="{{recommendationReason}}"></textarea>
+  </view>
+  <view class="form-group">
+    <view class="label">上传四个图片链接</view>
+    <textarea class="input" type="text" placeholder="请输入图片一链接" bindinput="imageUrlInput_1" value="{{imageUrl_1}}" ></textarea>
+    <textarea class="input" type="text" placeholder="请输入图片二链接" bindinput="imageUrlInput_2" value="{{imageUrl_2}}" ></textarea>
+    <textarea class="input" type="text" placeholder="请输入图片三链接" bindinput="imageUrlInput_3" value="{{imageUrl_3}}" ></textarea>
+    <textarea class="input" type="text" placeholder="请输入图片四链接" bindinput="imageUrlInput_4" value="{{imageUrl_4}}" ></textarea>
+  </view>
+  <view class="form-group">
+    <button class="btn" type="primary" bindtap="formSubmit">提交</button>
+  </view>
+</form>
