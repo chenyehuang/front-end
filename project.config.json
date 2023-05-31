@@ -40,11 +40,12 @@
     "disableUseStrict": false,
     "minifyWXML": true,
     "showES6CompileOption": false,
-    "useCompilerPlugins": false
+    "useCompilerPlugins": false,
+    "condition": false
   },
   "compileType": "miniprogram",
   "libVersion": "2.19.4",
-  "appid": "wxc2ac191ba5df5dd2",
+  "appid": "wxef773e30b4fbc429",
   "projectname": "zyx",
   "editorSetting": {
     "tabIndent": "insertSpaces",

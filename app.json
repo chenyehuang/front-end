@@ -22,6 +22,7 @@
     "pages/search/search",
     "pages/setting/setting",
     "pages/tips/tips",
+    "pages/tips-commit/tips-commit",
     "pages/worth/worth"
   ],
   "window": {
