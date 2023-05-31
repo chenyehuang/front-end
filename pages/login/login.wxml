@@ -1,1 +1,7 @@
+<<<<<<< HEAD
 <button type="primary" plain open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo">登陆</button>
+=======
+<view class="container">
+  <button class="login-button" bindtap="onLogin">登录</button>
+</view>
+>>>>>>> zhouyuxiang

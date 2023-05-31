@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <view class="content">
   <view class="line"></view>
   <view class="list-item" bindtap="chooseImage">
@@ -19,6 +20,64 @@
   <view class="spacer"></view> 
 
   <view class="line"></view>
+=======
+
+<view class="content">
+  <view class="line"></view>
+
+
+  <!-- 头像 -->
+  <view class="list-item" bindtap="chooseImage">
+    <view class="label">头像</view>
+    <view wx:if="{{userInfo.avatarUrl}}">
+      <image  class="info_icon" src="{{userInfo.avatarUrl}}" />
+    </view>
+    <view  wx:else>
+      <image class="avatar_img" src="/image/我的/我的.png" style="position: absolute; left: 640rpx; top: 0rpx"></image>
+    </view>
+    <image class="ahead_img" src="/image/我的/返回.png"></image>
+  </view>
+  <view class="line"></view>
+  <!-- <view class="list-item" bindtap="chooseImage">
+    <view class="label">头像</view>
+    <image class="avatar_img" src="/image/我的/我的.png"></image>
+    <image class="ahead_img" src="/image/我的/返回.png"></image>
+  </view>
+  <view class="line"></view> -->
+
+
+<!-- //////////////////////////////////////////////////////////// -->
+  <!-- 昵称 -->
+  <view class="list-item" >
+    <view class="label">昵称</view>
+    <view class="container">
+      <view class="username" bindtap="showModal" >{{userName}}</view>
+    </view>
+    <image class="ahead_img" src="/image/我的/返回.png"></image>
+  </view>
+  <view class="line"></view>
+
+<!-- 昵称——修改用户名的弹窗 -->
+<view class="modal {{showModal ? '' : 'hidden'}}">
+  <view class="modal-content" >
+    <view class="modal-title" >修改姓名</view>
+    <input class="modal-input" placeholder="请输入新名称" bindinput="inputNewName" value="{{newName}}"  ></input>
+    <view class="modal-buttons">
+      <button class="cancelModify" bindtap="cancelModify"  >取消</button>
+      <button class="confirmModify" bindtap="confirmModify"  >确定</button>
+    </view>
+  </view>
+</view>
+
+
+  
+  
+  <!-- 设置换行,并且为修改昵称留出空间 -->
+  <view class="spacer"></view> 
+  <view class="line"></view>
+
+  <!-- 收货地址 -->
+>>>>>>> zhouyuxiang
   <navigator url="/pages/address/address">
     <view class="list-item" bindtap="goToAddress">
       <view class="label">收货地址</view>
@@ -27,7 +86,11 @@
   </navigator>
   <view class="line"></view>
 
+<<<<<<< HEAD
 
+=======
+<!-- 管理员登录 -->
+>>>>>>> zhouyuxiang
   <view class="line"></view>
   <navigator url="/pages/Administrator/Administrator">
     <view class="list-item" bindtap="AdministratorLogin">
@@ -37,7 +100,11 @@
   </navigator>
   <view class="line"></view>
 
+<<<<<<< HEAD
 
+=======
+<!-- 绑定手机号 -->
+>>>>>>> zhouyuxiang
   <view class="line"></view>
   <view class="list-item" bindtap="goToSecurity">
     <view class="label">绑定手机号</view>
@@ -45,13 +112,22 @@
   </view>
   <view class="line"></view>
 
+<<<<<<< HEAD
+=======
+  <!-- 实名认证信息 -->
+>>>>>>> zhouyuxiang
   <view class="list-item" bindtap="logout">
     <view class="label">实名认证信息</view>
     <image class="ahead_img" src="/image/我的/返回.png"></image>
   </view>
   <view class="line"></view>
 
+<<<<<<< HEAD
   <view class="list-item" bindtap="logout">
+=======
+<!-- 账户与安全 -->
+  <view class="list-item" >
+>>>>>>> zhouyuxiang
     <view class="label">账户与安全</view>
     <image class="ahead_img" src="/image/我的/返回.png"></image>
   </view>
@@ -60,5 +136,9 @@
 
 
 <view>
+<<<<<<< HEAD
   <button class="sign_out" bindtap="showActionSheet">退出登录</button>
+=======
+  <button class="sign_out" bindtap="logOut">退出登录</button>
+>>>>>>> zhouyuxiang
 </view>

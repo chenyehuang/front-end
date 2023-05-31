@@ -5,7 +5,11 @@
     "include": []
   },
   "setting": {
+<<<<<<< HEAD
     "urlCheck": true,
+=======
+    "urlCheck": false,
+>>>>>>> zhouyuxiang
     "es6": true,
     "enhance": true,
     "postcss": true,
@@ -44,7 +48,11 @@
   },
   "compileType": "miniprogram",
   "libVersion": "2.19.4",
+<<<<<<< HEAD
   "appid": "wx683b87357b913145",
+=======
+  "appid": "wxc2ac191ba5df5dd2",
+>>>>>>> zhouyuxiang
   "projectname": "zyx",
   "editorSetting": {
     "tabIndent": "insertSpaces",

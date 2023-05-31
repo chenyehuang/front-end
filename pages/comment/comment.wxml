@@ -1,3 +1,18 @@
 <Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
   <!-- <view class="his_num">{{collectNums}}</view> -->
 </Tabs>
+<<<<<<< HEAD
+=======
+
+
+<view wx:for="{{comment}}" wx:key="nokey">
+<block>
+  <view>评论：{{item.content}} </view>
+  <view>商品id：{{item.product_id}} </view>
+  <view>评论时间：{{item.time}} </view>
+  <view>___________________</view>
+</block>
+</view>
+
+
+>>>>>>> zhouyuxiang

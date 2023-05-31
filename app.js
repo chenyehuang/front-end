@@ -16,4 +16,8 @@ App({
   globalData: {
     userInfo: null
   }
+<<<<<<< HEAD
+=======
+  
+>>>>>>> zhouyuxiang
 })

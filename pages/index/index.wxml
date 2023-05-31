@@ -1,4 +1,17 @@
 <!--index.wxml-->
+<<<<<<< HEAD
+=======
+
+
+
+
+<!-- 搜索部分 -->
+<view class="line1"></view>
+<searchInput></searchInput>
+<view class="line1"></view>
+
+
+>>>>>>> zhouyuxiang
 <!-- 轮播 -->
 <!-- swiper组件是用来定义滑块视图容器，swiper-item就是每一个滑块 -->
 <!-- 鼠标移到上面的标签或者属性可以看到解释 -->
@@ -14,8 +27,13 @@
       <!-- swiper-item里面承载的是一张图片，不同的swiper-item承载不同的图片 -->
 
       <!-- 这里路径要根据每一张轮播图片来改 -->
+<<<<<<< HEAD
       <navigator url="/pages/goods_detail/goods_detail">
         <image src="{{item}}"></image>
+=======
+      <navigator url="/pages/goods_detail/goods_detail?goods_id={{item.id}}">
+        <image src="{{item.image}}"></image>
+>>>>>>> zhouyuxiang
       </navigator>
 
     </swiper-item>
@@ -43,6 +61,7 @@
 </navigator>
 </view>
 
+<<<<<<< HEAD
 <!-- 销售排行-区域标题-->
 <view class='text'>
   <view class='line'></view>
@@ -72,3 +91,33 @@
     <text>查看更多</text>
     <view class="arrow"></view>
   </view>
+=======
+
+
+<!-- 销售排行-区域标题-->
+<view class='text'>
+  <view class='line'></view>
+  <text>排行榜 </text>
+  <view>
+  <text bindtap="goods_sort" data-type="default">默认 </text>
+  <text bindtap="goods_sort" data-type="latest">最新 </text>
+  <text bindtap="goods_sort" data-type="hot">最热 </text>
+</view>
+</view>
+<view class="goods-list">
+  <block wx:for="{{goodsList}}" wx:for-item="goods">
+    <navigator  class="goods-item" url="/pages/goods_detail/goods_detail?goods_id={{goods.id}}">
+        <image src="{{goods.image}}" class="goods-image"></image>
+        <view class="goods-info">
+          <view class="goods-name">{{goods.name}}</view>
+          <view class="goods-price">{{goods.price}}￥</view>
+          <view class="goods-likes">{{goods.value}}人认为值得买</view>
+        </view>
+    </navigator>
+  </block>
+</view>
+
+<view class="load-more" bindtap="loadMoreGoods">
+  <text>加载更多</text>
+</view>
+>>>>>>> zhouyuxiang

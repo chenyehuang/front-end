@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 <!-- <view class="user_info">
+=======
+<!-- 上面用户头像及名字 -->
+<view class="user1_info">
+>>>>>>> zhouyuxiang
   <view class="user_info_wrap" wx:if="{{userInfo.avatarUrl}}">
     <image class="user_bgc" src="{{userInfo.avatarUrl}}" />
     <view class="info">
@@ -9,6 +14,7 @@
   <view class="user_login" wx:else>
     <navigator url="/pages/login/login">登陆</navigator>
   </view>
+<<<<<<< HEAD
 </view> -->
 
 
@@ -28,6 +34,9 @@
 </view> -->
 <!-- </view> -->
 
+=======
+</view>
+>>>>>>> zhouyuxiang
 
 <!-- 下方功能 -->
 <view class="view_3">

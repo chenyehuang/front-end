@@ -1,5 +1,6 @@
 <!--pages/focus/focus.wxml-->
 
+<<<<<<< HEAD
 <view>
 <!-- 添加点击跳转 -->
   <view class="line1"></view>
@@ -49,3 +50,72 @@
 <view class="line"></view>
 
 </view>
+=======
+<!-- <view>
+  <search-input placeholder="请输入关键词" bindsearch="onSearch">
+    <button slot="action" type="primary" bindtap="switchScope">
+      {{activeScope === 'global' ? '全局' : '关注'}}搜索
+    </button>
+  </search-input>
+</view>
+
+<view>
+  <view wx:for="{{searchResults}}" wx:key="index">
+    <text>{{item.title}}</text>
+  </view>
+  <view wx:if="{{searchResults.length === 0}}">没有搜索结果</view>
+</view> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 搜索部分 -->
+<view class="line1"></view>
+<searchInput></searchInput>
+<!-- 下面注释是自己写的搜索代码，官方的不好用用这个 -->
+<!-- <navigator url="/pages/search/search">
+  <view class="list-item1">
+    <image class="item-image1" src="/icon/搜索.png"></image>
+    <text class="item-text1">搜索</text>
+  </view>
+</navigator> -->
+<view class="line1"></view>
+
+
+<!-- 购物车管理按钮 -->
+<view class="cart-manage" bindtap="manageCart">{{isManage ? '取消' : '管理'}}</view>
+
+<!-- 删除按钮 -->
+<view class="delete-btn" wx:if="{{isManage}}" bindtap="deleteCart">删除</view>
+
+<!-- 购物车列表 -->
+<view class="shopping_cart">
+  <checkbox-group bindchange="selectItem">
+    <view wx:for="{{cartList}}" wx:key="{{id}}">
+      <view>
+        <navigator  class="goods-item" url="/pages/goods_detail/goods_detail?goods_id={{item.id}}">
+          <checkbox wx:if="{{isManage}}" value="{{item.id}}" checked="{{item.checked}}" ></checkbox>
+          <image class="item-image" src="{{item.image}}"></image>
+          <text>{{item.name}}</text>
+          <view class="item-text">{{item.price}}元</view>
+        </navigator>
+      </view>
+      <view class="line"></view>
+    </view>
+  </checkbox-group>
+</view>
+
+>>>>>>> zhouyuxiang

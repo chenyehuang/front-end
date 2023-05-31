@@ -10,7 +10,11 @@
     </swiper-item>
   </swiper> -->
   <swiper autoplay indicator-dots circular>
+<<<<<<< HEAD
     <swiper-item wx:for="{{pic}}" wx:key="pics_id">
+=======
+    <swiper-item wx:for="{{goodInfo.pics}}" wx:key="pics_id">
+>>>>>>> zhouyuxiang
       <image mode="widthFix" src="{{item}}" bindtap="see" />
     </swiper-item>
   </swiper>
@@ -23,10 +27,17 @@
 <!-- 详情 -->
 <view class="detail_info">
   <!-- <view class="info_price">¥{{goodInfo.goods_price}}</view> -->
+<<<<<<< HEAD
   <view class="info_price">¥50</view>
   <view class="info_detail">
     <!-- <view class="info_name">{{goodInfo.goods_name}}</view> -->
     <view class="info_name">维达纸巾</view>
+=======
+  <view class="info_price">¥{{goodInfo.goods_price}}</view>
+  <view class="info_detail">
+    <!-- <view class="info_name">{{goodInfo.goods_name}}</view> -->
+    <view class="info_name">{{goodInfo.goods_name}}</view>
+>>>>>>> zhouyuxiang
     <view class="info_collect" bindtap="collectHandle">
       <!-- <text class="iconfont {{isCollect?'icon-shoucang1':'icon-shoucang'}}"></text> -->
       <image src="../../icon/{{is_collected}}收藏.png"  style="width: 55rpx; height: 55rpx; display: inline-block; box-sizing: border-box"></image>
@@ -38,9 +49,56 @@
   <view class="more_title">图文详情</view>
   <view class="more_image">
   <!-- 这里按照原型设计上面写 -->
+<<<<<<< HEAD
   <image src="../../image/fake/2.png"  ></image>
   <image src="../../image/fake/1.png"  ></image>
     <rich-text class="" nodes="{{goodInfo.goods_introduce}}"></rich-text>
+=======
+    <rich-text class="" nodes="{{goodInfo.goods_introduce}}"></rich-text>
+
+
+<!-- ////////////////////////////////////////////////////// -->
+<!-- <view class="container">
+    <canvas canvas-id="pieCanvas" class="canvas" style="height:300px" bindtouchstart="touchHandler"></canvas>
+</view> -->
+
+
+<!-- 值不值饼图 -->
+<canvas
+  type="2d"
+  id="canvas1"
+  style="width: 320px; height: 320px;"
+></canvas>
+
+<!-- 历史价格折线图 -->
+<canvas
+  type="2d"
+  id="canvas2"
+  style="width: 320px; height: 320px;"
+></canvas>
+
+<!-- 评论区 -->
+<test>评论区：</test>
+<view wx:for="{{comment}}" wx:key="item">
+<block>
+  <view>评论内容：{{item.content}} </view>
+  <view>用户：{{item.user}} </view>
+  <view>评论时间：{{item.time}} </view>
+  <view>___________________</view>
+</block>
+</view>
+
+
+
+<!-- 添加评论 -->
+<text>在下方输入以添加评论</text>
+<textarea bindinput="onInput"></textarea>
+<button bindtap="onConfirm">确认</button>
+
+
+
+
+>>>>>>> zhouyuxiang
   </view>
 </view>
 <!-- 底部工具栏 -->
