@@ -49,7 +49,6 @@ Page({
     //     console.log(res.data); // 输出接口返回的数据
     //   },
     //   fail: function (res) {
-    //     console.log('&&'); 
     //     // 请求失败回调函数
     //     console.error(res);
     //   }

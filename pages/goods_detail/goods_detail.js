@@ -21,7 +21,10 @@ Page({
         notValue: 0,
         //商品历史数据曲线
         recent_prices: [],
-
+        //商品评论信息
+        comment:[],
+        //输入评论文本
+        commentText:'',
         // 图片路径
         // pics:[
         //     "https://img14.360buyimg.com/n1/jfs/t1/105870/29/37356/181321/64182990Ff1348ae8/393261931108d053.jpg",
@@ -45,7 +48,50 @@ Page({
         })
       },
     
+    //获取评论输入
+    onInput: function (event) {
+      this.setData({
+        commentText: event.detail.value
+      });
+    },
+    //评论发送后端
+    onConfirm: function () {
+      var commentText = this.data.commentText;
+      var that=this
+      wx.getStorage({
+        key: 'openid', // 缓存的键名
+        success(res) {
+          var openid = res.data; // 获取到的值赋给变量x
+          wx.request({
+            url: 'http://47.115.221.21:8080/api/add_comment/', // 替换为你的接口地址
+            method: 'GET', // 请求方法，可选值包括：GET、POST、PUT、DELETE等
+            data: {
+              openid:openid,
+              good_id:that.data.goodInfo.id,
+              commentStr:commentText
+            },
+            header: {
+              // 'Content-Type': 'application/json' // 根据接口要求设置请求头
+            },
+            success: function (res) {
+              // 请求成功回调函数
+              console.log(res.data); // 输出接口返回的数据
+            },
+            fail: function (res) {
+              // 请求失败回调函数
+              console.error(res);
+            }
+          });
 
+        },
+        fail(err) {
+          console.log(err); // 如果获取失败，打印错误信息
+        }
+      });
+
+      // 将评论内容传递给后端
+      // 调用后端接口发送评论内容
+    },
     //点击收藏
     // 重写这个函数
     collectHandle() {
@@ -71,11 +117,7 @@ Page({
         //     mask: true
         // })
     },
-
-
-
     // 加入关注
-    //重写这个函数
     focusAdd() {
       // 从缓存中获取值x
       var that=this
@@ -132,30 +174,18 @@ Page({
       wx.request({
       url: 'http://47.115.221.21:8080/api/product/'+goods_id, // 替换为你的接口地址
       method: 'GET', // 请求方法，可选值包括：GET、POST、PUT、DELETE等
-      data: {
-        // 如果需要发送请求参数，可以在这里设置
-        // param1: 'value1',
-        // param2: 'value2'
-      },
-      header: {
-        // 'Content-Type': 'application/json' // 根据接口要求设置请求头
-      },
       success: function (res) {
         // 请求成功回调函数
         const goodInfo = res.data.products[0];
         // const goodsData = require('../../data/goods.js');
         // const goodInfo = goodsData.goodsData.find(item => item.id === parseInt(goods_id));
         console.log(goodInfo)
-        that.GoodInfo = goodInfo
-            //获取收藏信息————待完成
-        // let collect = wx.getStorageSync("collect") || [];
-        // let index = collect.findIndex(v => v.goods_id === this.GoodInfo.goods_id)
+        // that.GoodInfo = goodInfo
         that.setData({
             goodInfo: {
                 goods_name: goodInfo.name,
                 goods_price: goodInfo.price,
                 goods_introduce: goodInfo.introduce,
-                // goods_carousel_image: goodInfo.carousel_image,
                 pics: goodInfo.pics,
                 id:goodInfo.id,
                 
@@ -165,12 +195,32 @@ Page({
             notValue:goodInfo.notvalue
             // isCollect: index !== -1 ? true : false
         })
+        wx.request({
+          url: 'http://47.115.221.21:8080/api/get_product_comment', 
+          method: 'GET', 
+          data: {
+            good_id:goodInfo.id
+          },
+  
+          success: function (res) {
+            // 请求成功回调函数
+            console.log(res.data.comment); // 输出接口返回的数据
+            that.setData({
+              comment:res.data.comment
+            })
+          },
+          fail: function (res) {
+            // 请求失败回调函数
+            console.error(res);
+          }
+        });
       },
       fail: function (res) {
         // 请求失败回调函数
         console.error(res);
       }
     });
+
         
     },
     //添加购物车

@@ -61,6 +61,26 @@
   style="width: 320px; height: 320px;"
 ></canvas>
 
+<!-- 评论区 -->
+<test>评论区：</test>
+<view wx:for="{{comment}}" wx:key="item">
+<block>
+  <view>评论内容：{{item.content}} </view>
+  <view>用户：{{item.user}} </view>
+  <view>评论时间：{{item.time}} </view>
+  <view>___________________</view>
+</block>
+</view>
+
+
+
+<!-- 添加评论 -->
+<text>在下方输入以添加评论</text>
+<textarea bindinput="onInput"></textarea>
+<button bindtap="onConfirm">确认</button>
+
+
+
 
   </view>
 </view>

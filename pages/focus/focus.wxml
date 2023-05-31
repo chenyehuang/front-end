@@ -55,11 +55,12 @@
   <checkbox-group bindchange="selectItem">
     <view wx:for="{{cartList}}" wx:key="{{id}}">
       <view>
-        <checkbox wx:if="{{isManage}}" value="{{item.id}}" checked="{{item.checked}}" ></checkbox>
-        <image class="item-image" src="{{item.image}}"></image>
-        <text>{{item.name}}</text>
-        <view class="item-text">{{item.price}}元</view>
-
+        <navigator  class="goods-item" url="/pages/goods_detail/goods_detail?goods_id={{item.id}}">
+          <checkbox wx:if="{{isManage}}" value="{{item.id}}" checked="{{item.checked}}" ></checkbox>
+          <image class="item-image" src="{{item.image}}"></image>
+          <text>{{item.name}}</text>
+          <view class="item-text">{{item.price}}元</view>
+        </navigator>
       </view>
       <view class="line"></view>
     </view>
