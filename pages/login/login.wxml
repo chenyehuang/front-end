@@ -1,0 +1,3 @@
+<view class="container">
+  <button class="login-button" bindtap="onLogin">登录</button>
+</view>

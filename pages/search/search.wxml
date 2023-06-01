@@ -1,0 +1,10 @@
+<!-- 搜索框功能，输入后显示取消按钮 -->
+<view class="search_input">
+  <input placeholder="请输入搜索商品名称" value="{{inputValue}}" bindinput="inputChange" />
+  <button size="mini" hidden="{{!btnShow}}" bindtap="handleCancel">取消</button>
+</view>
+
+<!-- 下面这里是搜索功能，跳转到对应商品的详情页面 -->
+<navigator url="/pages/goods_detail/goods_detail?goods_id={{item.id}}" class="search_content" wx:for="{{goods}}" wx:key="id">
+  <view>{{item.name}}</view>
+</navigator>

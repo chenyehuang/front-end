@@ -1,0 +1,47 @@
+
+.user1_info {
+  height: 50vw;
+  overflow: hidden;
+}
+.user1_info .user_info_wrap {
+  position: relative;
+}
+.user1_info .user_info_wrap .user_bgc {
+  height: 70vw;
+  filter: blur(10rpx);
+}
+.user1_info .user_info_wrap .info {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 80rpx;
+}
+.user1_info .user_info_wrap .info .info_icon {
+  height: 170rpx;
+  width: 170rpx;
+  border-radius: 50%;
+}
+.user1_info .user_info_wrap .info .info_name {
+  text-align: center;
+  margin-top: 20rpx;
+  color: rgb(255, 255, 255);
+  font-size: 38rpx;
+  font-weight: bold;
+}
+.user1_info .user_login {
+  position: relative;
+  height: 70vw;
+  background-color: var(--themeColor);
+}
+.user1_info .user_login navigator {
+  position: absolute;
+  padding: 20rpx 40rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 120rpx;
+  border: 6rpx solid rgb(255, 0, 0);
+  border-radius: 10rpx;
+  text-align: center;
+  color: rgb(255, 0, 0);
+  font-weight: bold;
+}

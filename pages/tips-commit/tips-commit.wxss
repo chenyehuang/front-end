@@ -1,0 +1,13 @@
+/* pages/tips-commit/tips-commit.wxss */
+.form-group{
+  width: 100%;
+  margin-top: 20rpx;
+}
+
+.picker{
+  color: blue;
+}
+
+.price-value-date{
+  color :blue;
+}

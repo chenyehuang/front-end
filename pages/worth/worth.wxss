@@ -1,0 +1,17 @@
+.worth_main {
+  background-color: #f3f4f6;
+}
+.worth_main .worth_title {
+  padding: 40rpx 0;
+}
+.worth_main .worth_title .worth_tips {
+  padding: 12rpx;
+  border: 1rpx solid rgb(24, 24, 24);
+  margin-left: 25rpx;
+  background-color: rgb(252, 248, 248);
+}
+.worth_main .worth_title .active {
+  color: red;
+  border-color: currentColor;
+}
+

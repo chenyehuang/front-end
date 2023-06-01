@@ -1,0 +1,115 @@
+<!-- 这里重新写，对接数据库传参 -->
+
+
+<!-- 轮播图 -->
+<view class="detail_swiper">
+
+  <!-- <swiper autoplay indicator-dots circular>
+    <swiper-item wx:for="{{goodInfo.pics}}" wx:key="pics_id">
+      <image mode="widthFix" src="{{item.pics_mid}}" />
+    </swiper-item>
+  </swiper> -->
+  <swiper autoplay indicator-dots circular>
+    <swiper-item wx:for="{{goodInfo.pics}}" wx:key="pics_id">
+      <image mode="widthFix" src="{{item}}" bindtap="see" />
+    </swiper-item>
+  </swiper>
+
+
+  <!-- <image mode="widthFix" src="../../image/商品/goods1.png" bindtap="see"/> -->
+</view>
+
+
+<!-- 详情 -->
+<view class="detail_info">
+  <!-- <view class="info_price">¥{{goodInfo.goods_price}}</view> -->
+  <view class="info_price">¥{{goodInfo.goods_price}}</view>
+  <view class="info_detail">
+    <!-- <view class="info_name">{{goodInfo.goods_name}}</view> -->
+    <view class="info_name">{{goodInfo.goods_name}}</view>
+    <view class="info_collect" bindtap="collectHandle">
+      <!-- <text class="iconfont {{isCollect?'icon-shoucang1':'icon-shoucang'}}"></text> -->
+      <image src="../../icon/{{is_collected}}收藏.png"  style="width: 55rpx; height: 55rpx; display: inline-block; box-sizing: border-box"></image>
+      <view class="collect_text">收藏</view>
+    </view>
+  </view>
+</view>
+<view class="detail_more">
+  <view class="more_title">图文详情</view>
+  <view class="more_image">
+  <!-- 这里按照原型设计上面写 -->
+    <rich-text class="" nodes="{{goodInfo.goods_introduce}}"></rich-text>
+
+
+<!-- ////////////////////////////////////////////////////// -->
+<!-- <view class="container">
+    <canvas canvas-id="pieCanvas" class="canvas" style="height:300px" bindtouchstart="touchHandler"></canvas>
+</view> -->
+
+
+<!-- 值不值饼图 -->
+<canvas
+  type="2d"
+  id="canvas1"
+  style="width: 320px; height: 320px;"
+></canvas>
+
+<!-- 历史价格折线图 -->
+<canvas
+  type="2d"
+  id="canvas2"
+  style="width: 320px; height: 320px;"
+></canvas>
+
+<!-- 评论区 -->
+<view>评论区：</view>
+<view>--------------------</view>
+<view wx:for="{{comment}}" wx:key="item">
+<block>
+  <view>评论内容：{{item.content}} </view>
+  <view>用户：{{item.user}} </view>
+  <view>评论时间：{{item.time}} </view>
+  <view>___________________</view>
+</block>
+</view>
+
+  <view>--------------------</view>
+
+<!-- 添加评论 -->
+<view>我要评论：</view>
+<textarea placeholder="请输入评论" bindinput="onInput"></textarea>
+<button bindtap="onConfirm">发布</button>
+
+
+
+
+  </view>
+</view>
+<!-- 底部工具栏 -->
+<view class="btm_tool">
+  <view class="tool_item">
+    <!-- <view class="iconfont icon-kefu"></view> -->
+    <image src="../../icon/客服.png" style="width: 60rpx; height: 60rpx; display: block; box-sizing: border-box"></image>
+    <view>客服</view>
+    <button open-type="contact" style="width: 132rpx; height: 90rpx; display: block; box-sizing: border-box; left: 10rpx; top: 0rpx; position: absolute"></button>
+  </view>
+
+  <!-- <view class="tool_item">
+    <view class="iconfont icon-yixianshi-"></view>
+    <view>分享</view>
+    <button open-type="share"></button>
+  </view> -->
+
+  <!-- <navigator open-type="switchTab" url="/pages/cart/cart" class="tool_item">
+    <view class="iconfont icon-gouwuche"></view>
+    <view>加入关注</view>
+  </navigator> -->
+
+
+  <view class="tool_item btn_cart ">
+    <view>分享</view>
+    <button open-type="share"></button>
+  </view>
+
+  <view class="tool_item btn_buy " bindtap="focusAdd">加入关注</view>
+</view>
