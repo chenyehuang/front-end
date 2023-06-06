@@ -1,36 +1,55 @@
-Page({
-    data: {
-      tips:[],
-      tabs: [
-        {
-          id: 0,
-          value: "最新",
-          isActive: true
-        },
-        {
-          id: 1,
-          value: "最赞",
-          isActive: false
-        },
-      ]
-    },
-    onShow(){
-      const tips=wx.getStorageSync("tips")||[];
-      this.setData({
-        tips
 
-      });
-        
-    },
-    handleTabsItemChange(e) {
-      // 1 获取被点击的标题索引
-      const { index } = e.detail;
-      // 2 修改源数组
-      let { tabs } = this.data;
-      tabs.forEach((v, i) => i === index ? v.isActive = true : v.isActive = false);
-      // 3 赋值到data中
-      this.setData({
-        tabs
-      })
-    }
-  })
+
+// 获取应用实例
+const app = getApp()
+
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    goodsList: [],        // 爆料的内容
+    userId:""
+},
+
+  //请求我的爆料内容
+  get_goodsList(){
+    var that = this;
+    wx.request({
+      url: 'http://47.115.221.21:8080/api/get_break/',
+      data:{
+        openid: that.data.userId
+      },
+      success: (res) => {
+        this.setData({
+          goodsList: res.data,
+        });
+      },
+    });
+  },
+onLoad: function () {
+
+  var userId = wx.getStorageSync('openid');
+  if (userId) {
+  this.setData({
+  userId: userId
+  });
+  } else {
+  wx.showToast({
+  title: '请先登录',
+  icon: 'none',
+  duration: 2000
+  });
+  setTimeout(function () {
+  wx.switchTab({
+  url: '/pages/index/index'
+  });
+  }, 2000);
+  };
+
+  this.get_goodsList()
+ 
+}
+
+})
