@@ -73,7 +73,7 @@
 <view wx:for="{{comment}}" wx:key="item">
 <block>
   <view>评论内容：{{item.content}} </view>
-  <view>用户：{{item.user}} </view>
+  <view>评论用户：{{item.user_name}} </view>
   <view>评论时间：{{item.time}} </view>
   <view>___________________</view>
 </block>
