@@ -1,1 +1,4 @@
 /* pages/Administrator/guidance_note/guidance_note.wxss */
+.line{
+  background: grey;
+}

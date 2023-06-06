@@ -1,6 +1,6 @@
-<Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
-  <!-- <view class="his_num">{{collectNums}}</view> -->
-</Tabs>
+<!-- <Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
+  <view class="his_num">{{collectNums}}</view>
+</Tabs> -->
 
 
 <view wx:for="{{comment}}" wx:key="nokey">

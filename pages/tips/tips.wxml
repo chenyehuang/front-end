@@ -3,6 +3,6 @@
       <view class="text">我要爆料</view>
   </navigator>
 
-<Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
+<!-- <Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
 
-</Tabs>
+</Tabs> -->

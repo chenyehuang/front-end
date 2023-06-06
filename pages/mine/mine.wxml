@@ -15,13 +15,13 @@
 <!-- 下方功能 -->
 <view class="view_3">
 <!-- 添加点击跳转 -->
-  <navigator url="/pages/collect/collect">
+  <!-- <navigator url="/pages/collect/collect">
     <view class="list-item">
       <image class="item-image" src="/image/我的/收藏.png"></image>
       <text class="item-text">我的收藏</text>
       <image class="image-fanghui" src="/image/我的/返回.png"></image>
     </view>
-  </navigator>
+  </navigator> -->
   
     <view class="line"></view>
     <navigator url="/pages/worth/worth">
@@ -53,13 +53,13 @@
 
     <view class="line"></view>
 
-    <navigator url="/pages/footprint/footprint">
+    <!-- <navigator url="/pages/footprint/footprint">
       <view class="list-item">
         <image class="item-image" src="/image/我的/足迹.png"></image>
         <text class="item-text">我的足迹</text>
         <image class="image-fanghui" src="/image/我的/返回.png"></image>
       </view>
-    </navigator>
+    </navigator> -->
 
     <view class="line"></view>
 

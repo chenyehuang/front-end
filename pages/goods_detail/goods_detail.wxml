@@ -48,18 +48,24 @@
 
 
 <!-- 值不值饼图 -->
-<canvas
+<view class="Pie">
+  <canvas
   type="2d"
   id="canvas1"
   style="width: 320px; height: 320px;"
 ></canvas>
+</view>
+
 
 <!-- 历史价格折线图 -->
-<canvas
+<view class="line_chart">
+  <canvas
   type="2d"
   id="canvas2"
   style="width: 320px; height: 320px;"
 ></canvas>
+</view>
+
 
 <!-- 评论区 -->
 <test>评论区：</test>
@@ -84,6 +90,13 @@
 
   </view>
 </view>
+
+<!-- zjk -->
+<radio-group bindchange="handleChange">
+	<radio value="0">值</radio>
+	<radio value="1">不值</radio>
+</radio-group>
+
 <!-- 底部工具栏 -->
 <view class="btm_tool">
   <view class="tool_item">

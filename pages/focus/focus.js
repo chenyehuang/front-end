@@ -102,7 +102,6 @@ Page({
               key: 'openid', // 缓存的键名
               success(res) {
                 var openid = res.data; // 获取到的值赋给变量x
-                console.log("io",good_id)
                 wx.request({
                   url: 'http://47.115.221.21:8080/api/delete_collect', // 替换为你的接口地址
                   method: 'GET', // 请求方法，可选值包括：GET、POST、PUT、DELETE等

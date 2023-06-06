@@ -1,2 +1,14 @@
 <!--pages/Administrator/guidance_note/guidance_note.wxml-->
-<text>pages/Administrator/guidance_note/guidance_note.wxml</text>
+<text style="position: relative; left: 282rpx; top: 155rpx">管理员说明</text>
+<view class="line" style="position: relative; left: 196rpx; top: 179rpx; width: 359rpx; height: 3rpx; display: block; box-sizing: border-box"></view>
+<text style="position: relative; left: 94rpx; top: 130rpx">
+管理员使用说明以及管理使用方法
+</text>
+<text style="position: relative; left: 141rpx; top: 129rpx">1.xxxxxxxxxxxxxxxxxxxxxxx
+2.xxxxxxxxxxxxxxxxxxxxxxx
+3.xxxxxxxxxxxxxxxxxxxxxxx
+4.xxxxxxxxxxxxxxxxxxxxxxx
+5.xxxxxxxxxxxxxxxxxxxxxxx
+6.xxxxxxxxxxxxxxxxxxxxxxx
+7.xxxxxxxxxxxxxxxxxxxxxxx
+8.xxxxxxxxxxxxxxxxxxxxxxx</text>

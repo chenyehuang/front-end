@@ -16,6 +16,10 @@ Page({
 
 
     data: {
+        //zjk代码中新增内容
+        like: 1,
+        goodsData:{},
+        userinfo:{},
         //绘制饼图
         value: 0,
         notValue: 0,
@@ -110,12 +114,12 @@ Page({
         wx.setStorageSync("collect", collect)
         this.setData({ isCollect })
 
-        // wx.showToast({
-        //     title: '已经加入收藏',
-        //     icon: 'success',
-        //     // true 防止用户 手抖 疯狂点击按钮 
-        //     mask: true
-        // })
+        wx.showToast({
+            title: '已经加入收藏',
+            icon: 'success',
+            // true 防止用户 手抖 疯狂点击按钮 
+            mask: true
+        })
     },
     // 加入关注
     focusAdd() {
@@ -126,13 +130,13 @@ Page({
         success(res) {
           var openid = res.data; // 获取到的值赋给变量x
           // console.log(openid)
-          // console.log(that.GoodInfo.id)
+          console.log(that.data.goodInfo)
           wx.request({
             url: 'http://47.115.221.21:8080/api/add_collect', // 替换为你的接口地址
             method: 'GET', // 请求方法，可选值包括：GET、POST、PUT、DELETE等
             data: {
               // 如果需要发送请求参数，可以在这里设置id：good_id以及用户的openid
-              good_id:that.GoodInfo.id,
+              good_id:that.data.goodInfo.id,
               openid:openid
             },
             success: function (res) {
@@ -263,6 +267,29 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onShow: function(options) {
+      var that = this
+      wx.request({
+        url: 'http://47.115.221.21:8080/api/product', //需更换需请求数据的接口
+        method: 'GET',//请求方式 OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+        data: {
+          // 如果需要发送请求参数，可以在这里设置
+          // param1: 'value1',
+          // param2: 'value2'
+        },
+        headers: {
+          
+        },
+        success: function (res) {
+          var data = res.data.products;
+          console.log(data);
+          that.setData({
+            goodsData:data
+          })
+
+        },          
+
+        fail: function (err) {console.log("失败") },//请求失败
+      })
         let pages = getCurrentPages();
         let goods_id = pages[pages.length - 1].options.goods_id
         this.getGoodInfo(goods_id)
@@ -497,6 +524,57 @@ Page({
     
       },
 
+
+      //zjk
+      handleChange(e){
+        
+
+        console.log(e);
+       let like = e.detail.value
+      // var that = this,
+       const openid = wx.getStorageSync('openid');
+       
+
+       if(like !== undefined){
+         const onum = this.data.value;
+         const onum1 = this.data.notValue 
+         console.log(like);
+       if(like == 0){
+         this.data.value = (onum + 1);        
+         this.setData({
+         like:"0",
+         value:this.data.value,
+         notValue:this.data.notValue})
+       }
+       if(like == 1){
+         this.data.notValue = (onum1 + 1);
+         this.setData({
+           like:"1",
+           value:this.data.value,
+           notValue:this.data.notValue})
+       }
+      }
+
+       
+
+       console.log(this.data.goodInfo.goods_name)
+       wx.request({
+         url: 'http://47.115.221.21:8080/api/value_or_not/',
+         data:{
+          userId: openid, //用户id
+         goodInfo:this.data.goodInfo.goods_name,
+         value:this.data.value
+         },
+         method:'GET',
+         success:function(res){
+           console.log("成功");
+           console.log(res.data)
+         },
+         fail:function(res){
+           console.log("失败");
+         }
+       })
+     },
 
 
 

@@ -54,13 +54,13 @@
   <view class="line"></view>
 
   <!-- 收货地址 -->
-  <navigator url="/pages/address/address">
+  <!-- <navigator url="/pages/address/address">
     <view class="list-item" bindtap="goToAddress">
       <view class="label">收货地址</view>
       <image class="ahead_img" src="/image/我的/返回.png"></image>
     </view>
   </navigator>
-  <view class="line"></view>
+  <view class="line"></view> -->
 
 <!-- 管理员登录 -->
   <view class="line"></view>
@@ -73,26 +73,28 @@
   <view class="line"></view>
 
 <!-- 绑定手机号 -->
-  <view class="line"></view>
+  <!-- <view class="line"></view>
   <view class="list-item" bindtap="goToSecurity">
     <view class="label">绑定手机号</view>
     <image class="ahead_img" src="/image/我的/返回.png"></image>
   </view>
-  <view class="line"></view>
+  <view class="line"></view> -->
 
   <!-- 实名认证信息 -->
-  <view class="list-item" bindtap="logout">
+  <!-- <view class="list-item" bindtap="logout">
     <view class="label">实名认证信息</view>
     <image class="ahead_img" src="/image/我的/返回.png"></image>
   </view>
-  <view class="line"></view>
+  <view class="line"></view> -->
 
 <!-- 账户与安全 -->
-  <view class="list-item" >
+  <!-- <view class="list-item" >
     <view class="label">账户与安全</view>
     <image class="ahead_img" src="/image/我的/返回.png"></image>
   </view>
-  <view class="line"></view>
+  <view class="line"></view> -->
+
+  
 </view>
 
 
