@@ -39,13 +39,13 @@
 
 <!-- 导航菜单 -->
 <view id="navView">
-  <navigator url="/pages/collect/collect" style="width: 347rpx; height: 250rpx; display: block; box-sizing: border-box">
+  <navigator url="/pages/worth/worth" style="width: 347rpx; height: 250rpx; display: block; box-sizing: border-box">
     <view class="navItemView">
       <image src="/image/首页/我要推荐.jpg"></image>
-      <text>我的收藏</text>
+      <text>我的值不值</text>
     </view>
   </navigator>
-  <navigator url="/pages/worth/worth" style="width: 347rpx; height: 250rpx; display: block; box-sizing: border-box">
+  <navigator url="/pages/tips/tips" style="width: 347rpx; height: 250rpx; display: block; box-sizing: border-box">
     <view class="navItemView">
       <image src="/image/首页/我要购买.jpg"></image>
       <text>我要推荐</text>
