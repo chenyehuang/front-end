@@ -1,5 +1,4 @@
-<Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
-<!-- 这部分可以看情况删除 -->
+<!-- <Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
   <view class="worth_main">
     <view class="worth_title">
       <text class="worth_tips active">商品</text>
@@ -7,4 +6,41 @@
       <text class="worth_tips">资讯</text>
     </view> 
   </view>
+</Tabs> -->
+
+<Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
+  <view class="page">
+  <!-- 导航条.tab太多的时候需要使用scrollview -->
+  <view class="navBar">
+    <block wx:for="{{tabs}}" wx:key="item">
+      <view id="{{index}}" class="navItem {{tabIndex == index ? 'active' : '' }}" bindtap="onTabClick">
+        <view class="navItemTitle">{{item}}</view>
+      </view>
+    </block>
+  </view>
+
+  <!-- 内容区域 -->
+  <view class="content_wrapper">
+    <!-- 第一个tab -->
+    <block wx:for="worth">
+    <block wx:if="{{tabIndex == 0}}">
+      <view wx:if="{{worth[index].value_or_not == 0}}">你对{{worth[index].product_name}}点了个值</view>
+     
+    </block>
+</block>
+    <!-- 第二个tab -->
+
+    <block wx:for="notworth">
+    <block wx:if="{{tabIndex == 1}}">
+      <view wx:if="{{worth[index].value_or_not == 1}}">你对{{worth[index].product_name}}点了个不值</view>
+     
+    </block>
+</block>
+
+
+
+  </view>
+</view>
+
+    
 </Tabs>

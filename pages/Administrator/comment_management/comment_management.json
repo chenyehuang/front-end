@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  "navigationBarTitleText": "评论管理",
+  "backgroundTextStyle": "light",
+  "navigationBarTextStyle": "black"
 }

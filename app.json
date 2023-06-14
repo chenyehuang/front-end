@@ -2,6 +2,7 @@
   "pages": [
     "pages/index/index",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "pages/mine/mine",
     "pages/feedback/feedback",
     "pages/setting/setting",
@@ -17,27 +18,31 @@
     "pages/detail/detail"
 =======
 
+=======
+>>>>>>> zhouyuxiang
     "pages/Administrator/Administrator",
     "pages/Administrator/user_management/user_management",
     "pages/Administrator/goods_management/goods_management",
     "pages/Administrator/comment_management/comment_management",
     "pages/Administrator/mine_info/mine_info",
     "pages/Administrator/guidance_note/guidance_note",
-    "pages/collect/collect",
     "pages/comment/comment",
-    "pages/detail/detail",
     "pages/feedback/feedback",
     "pages/focus/focus",
     "pages/footprint/footprint",
     "pages/goods_detail/goods_detail",
     "pages/login/login",
-    "pages/manage/manage",
     "pages/mine/mine",
     "pages/logs/logs",
     "pages/search/search",
     "pages/setting/setting",
     "pages/tips/tips",
+<<<<<<< HEAD
     "pages/worth/worth"
+>>>>>>> zhouyuxiang
+=======
+    "pages/worth/worth",
+    "pages/tips-commit/tips-commit"
 >>>>>>> zhouyuxiang
   ],
   "window": {

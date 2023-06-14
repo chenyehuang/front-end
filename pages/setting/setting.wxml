@@ -77,14 +77,18 @@
   <view class="line"></view>
 
   <!-- 收货地址 -->
+<<<<<<< HEAD
 >>>>>>> zhouyuxiang
   <navigator url="/pages/address/address">
+=======
+  <!-- <navigator url="/pages/address/address">
+>>>>>>> zhouyuxiang
     <view class="list-item" bindtap="goToAddress">
       <view class="label">收货地址</view>
       <image class="ahead_img" src="/image/我的/返回.png"></image>
     </view>
   </navigator>
-  <view class="line"></view>
+  <view class="line"></view> -->
 
 <<<<<<< HEAD
 
@@ -104,34 +108,48 @@
 
 =======
 <!-- 绑定手机号 -->
+<<<<<<< HEAD
 >>>>>>> zhouyuxiang
   <view class="line"></view>
+=======
+  <!-- <view class="line"></view>
+>>>>>>> zhouyuxiang
   <view class="list-item" bindtap="goToSecurity">
     <view class="label">绑定手机号</view>
     <image class="ahead_img" src="/image/我的/返回.png"></image>
   </view>
-  <view class="line"></view>
+  <view class="line"></view> -->
 
 <<<<<<< HEAD
 =======
   <!-- 实名认证信息 -->
+<<<<<<< HEAD
 >>>>>>> zhouyuxiang
   <view class="list-item" bindtap="logout">
+=======
+  <!-- <view class="list-item" bindtap="logout">
+>>>>>>> zhouyuxiang
     <view class="label">实名认证信息</view>
     <image class="ahead_img" src="/image/我的/返回.png"></image>
   </view>
-  <view class="line"></view>
+  <view class="line"></view> -->
 
 <<<<<<< HEAD
   <view class="list-item" bindtap="logout">
 =======
 <!-- 账户与安全 -->
+<<<<<<< HEAD
   <view class="list-item" >
+>>>>>>> zhouyuxiang
+=======
+  <!-- <view class="list-item" >
 >>>>>>> zhouyuxiang
     <view class="label">账户与安全</view>
     <image class="ahead_img" src="/image/我的/返回.png"></image>
   </view>
-  <view class="line"></view>
+  <view class="line"></view> -->
+
+  
 </view>
 
 

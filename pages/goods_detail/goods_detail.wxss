@@ -11,6 +11,12 @@
 page {
   padding-bottom: 9000rpx;
 }
+.Pie{
+  padding: 10rpx;
+}
+.line_chart{
+  padding: 10rpx;
+}
 .detail_swiper swiper {
   height: 70vw;
   text-align: center;
@@ -101,4 +107,18 @@ page {
   color: #fff;
   font-size: 30rpx;
   font-weight: 600;
+}
+
+/* zjk */
+.like{
+   
+  height: 50rpx;
+  width: 50rpx;
+
+}
+.unlike{
+  
+ height: 50rpx;
+ width: 50rpx;
+
 }

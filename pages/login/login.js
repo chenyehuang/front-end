@@ -202,7 +202,7 @@ Page({
             let code=res.code
             // 通过code换取openId
             wx.request({
-              url: `https://api.weixin.qq.com/sns/jscode2session?appid=wxc2ac191ba5df5dd2&secret=0dbc1c8d11316c8012c2b18bccc61bd7&js_code=${code}&grant_type=authorization_code`,
+              url: `https://api.weixin.qq.com/sns/jscode2session?appid=wxef773e30b4fbc429&secret=c312d462ceafb79c1effbacc185a864e&js_code=${code}&grant_type=authorization_code`,
               success:(res)=>{
                 userInfo.openid=res.data.openid
                 const openid=res.data.openid

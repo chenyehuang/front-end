@@ -1,2 +1,41 @@
-<!--pages/Administrator/user_management/user_management.wxml-->
-<text>pages/Administrator/user_management/user_management.wxml</text>
+
+
+<view class='load-more'>
+  <text>用户信息</text>
+<!--    隐藏选项，默认排行
+  <view>
+  <text bindtap="goods_sort" data-type="default">默认 </text>
+  <text bindtap="goods_sort" data-type="latest">最新 </text>
+  <text bindtap="goods_sort" data-type="hot">最热 </text>
+</view>
+-->
+</view>
+
+<view>
+<block wx:for="{{Users.users}}" wx:for-item="users" wx:for-index="idx">
+<image class="goods-image" src="{{users.avatarUrl}}"></image>
+<view class="goods-list">
+    <view  class="goods-item" >
+      
+        <view class="goods-info">
+          <view class="goods-name">nickName：{{users.nickName}}</view>
+          <view class="goods-name">openid：{{users.openid}}</view>
+
+          <view class="toast" hidden="{{!showToast}}">
+          {{toastMessage}}
+          </view>
+          <button bindtap="deleteProduct">删除用户</button>
+        <view class="modal" hidden="{{!showModal}}">
+          <view class="modal-content">确定要删除该用户吗？</view>
+          <view class="modal-buttons">
+            <button class="modal-button" bindtap="cancelDelete">取消</button>
+            <button class="modal-button" bindtap="confirmDelete"  data-index="{{idx}}">确定</button>
+          </view>
+        </view>
+
+        </view>
+    </view>
+  
+</view>
+</block>
+</view>

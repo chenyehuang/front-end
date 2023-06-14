@@ -44,14 +44,19 @@
     "disableUseStrict": false,
     "minifyWXML": true,
     "showES6CompileOption": false,
-    "useCompilerPlugins": false
+    "useCompilerPlugins": false,
+    "condition": false
   },
   "compileType": "miniprogram",
   "libVersion": "2.19.4",
 <<<<<<< HEAD
+<<<<<<< HEAD
   "appid": "wx683b87357b913145",
 =======
   "appid": "wxc2ac191ba5df5dd2",
+>>>>>>> zhouyuxiang
+=======
+  "appid": "wxef773e30b4fbc429",
 >>>>>>> zhouyuxiang
   "projectname": "zyx",
   "editorSetting": {

@@ -1,2 +1,32 @@
-<!--pages/Administrator/comment_management/comment_management.wxml-->
-<text>pages/Administrator/comment_management/comment_management.wxml</text>
+
+
+
+<view>
+<block wx:for="{{comment.comments}}" wx:for-item="item" wx:key="nokey" wx:for-index="idx">
+<view class="goods-list">
+    <view  class="goods-item" >
+      <image src="{{item.product_image}}" class="goods-image"></image>
+        <view class="goods-info">
+          <view class="goods-name">{{item.product_name}}</view>
+          <view class="goods-name1">评论的用户：{{item.commenter_name}}</view>
+          <view class="goods-name">评论内容：{{item.content}}</view>
+          <view class="goods-name">评论时间：{{item.time}}</view>
+
+          <view class="toast" hidden="{{!showToast}}">
+          {{toastMessage}}
+          </view>
+          <button bindtap="deleteProduct">删除该评论</button>
+        <view class="modal" hidden="{{!showModal}}">
+          <view class="modal-content">确定要删除该评论吗？</view>
+          <view class="modal-buttons">
+            <button class="modal-button" bindtap="cancelDelete">取消</button>
+            <button class="modal-button" bindtap="confirmDelete"  data-index="{{idx}}">确定</button>
+          </view>
+        </view>
+
+        </view>
+    </view>
+  
+</view>
+</block>
+</view>

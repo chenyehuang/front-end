@@ -1,9 +1,0 @@
-{
-  "usingComponents": {
-    "Tabs":"../../components/Tabs/Tabs"
-  },
-  "navigationBarTitleText":"我的收藏",
-  "backgroundTextStyle": "light",
-  "navigationBarTextStyle": "black",
-  "navigationBarBackButtonImage": "/image/返回上一级.png"
-}

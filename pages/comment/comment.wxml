@@ -1,18 +1,45 @@
+<<<<<<< HEAD
 <Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
   <!-- <view class="his_num">{{collectNums}}</view> -->
 </Tabs>
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> zhouyuxiang
 
 
-<view wx:for="{{comment}}" wx:key="nokey">
-<block>
-  <view>评论：{{item.content}} </view>
-  <view>商品id：{{item.product_id}} </view>
-  <view>评论时间：{{item.time}} </view>
-  <view>___________________</view>
+
+<view>
+<block wx:for="{{comment.comments}}" wx:for-item="item" wx:key="nokey" wx:for-index="idx">
+<view class="goods-list">
+    <view  class="goods-item" >
+      <image src="{{item.prodct_image}}" class="goods-image"></image>
+        <view class="goods-info">
+          <view class="goods-name">{{item.prodct_name}}</view>
+          <view class="goods-name">评论：{{item.content}}</view>
+          <view class="goods-name">评论时间：{{item.time}}</view>
+
+          <view class="toast" hidden="{{!showToast}}">
+          {{toastMessage}}
+          </view>
+          <button bindtap="deleteProduct">删除该评论</button>
+        <view class="modal" hidden="{{!showModal}}">
+          <view class="modal-content">确定要删除该评论吗？</view>
+          <view class="modal-buttons">
+            <button class="modal-button" bindtap="cancelDelete">取消</button>
+            <button class="modal-button" bindtap="confirmDelete"  data-index="{{idx}}">确定</button>
+          </view>
+        </view>
+
+        </view>
+    </view>
+  
+</view>
+<<<<<<< HEAD
+
+
+>>>>>>> zhouyuxiang
+=======
 </block>
 </view>
-
-
 >>>>>>> zhouyuxiang

@@ -64,36 +64,43 @@
 
 
 <!-- 值不值饼图 -->
-<canvas
+<view class="Pie">
+  <canvas
   type="2d"
   id="canvas1"
   style="width: 320px; height: 320px;"
 ></canvas>
+</view>
+
 
 <!-- 历史价格折线图 -->
-<canvas
+<view class="line_chart">
+  <canvas
   type="2d"
   id="canvas2"
   style="width: 320px; height: 320px;"
 ></canvas>
+</view>
+
 
 <!-- 评论区 -->
-<test>评论区：</test>
+<view>评论区：</view>
+<view>--------------------</view>
 <view wx:for="{{comment}}" wx:key="item">
 <block>
   <view>评论内容：{{item.content}} </view>
-  <view>用户：{{item.user}} </view>
+  <view>评论用户：{{item.user_name}} </view>
   <view>评论时间：{{item.time}} </view>
   <view>___________________</view>
 </block>
 </view>
 
-
+  <view>--------------------</view>
 
 <!-- 添加评论 -->
-<text>在下方输入以添加评论</text>
-<textarea bindinput="onInput"></textarea>
-<button bindtap="onConfirm">确认</button>
+<view>我要评论：</view>
+<textarea placeholder="请输入评论" bindinput="onInput"></textarea>
+<button bindtap="onConfirm">发布</button>
 
 
 
@@ -101,6 +108,13 @@
 >>>>>>> zhouyuxiang
   </view>
 </view>
+
+<!-- zjk -->
+<radio-group bindchange="handleChange">
+	<radio value="0">值</radio>
+	<radio value="1">不值</radio>
+</radio-group>
+
 <!-- 底部工具栏 -->
 <view class="btm_tool">
   <view class="tool_item">
